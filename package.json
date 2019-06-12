@@ -1,0 +1,23 @@
+{
+  "name": "photoplacelocator",
+  "version": "1.0.0",
+  "description": "just a personal project for me to find photo-worthy places to take pics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jansk32/PhotoPlaceLocator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jansk32/PhotoPlaceLocator/issues"
+  },
+  "homepage": "https://github.com/jansk32/PhotoPlaceLocator#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.3"
+  }
+}

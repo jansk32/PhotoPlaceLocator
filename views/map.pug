@@ -6,7 +6,7 @@ html
     body
         #map
         script.
-            var map = L.map('map').setView([37.814, 144.96332], 15);
+            var map = L.map('map').setView([-37.814, 144.96332], 15);
             mapLink =
             '<a href="http://openstreetmap.org">OpenStreetMap</a>';
             L.tileLayer(
@@ -14,3 +14,17 @@ html
             attribution: '&copy; ' + mapLink + ' Contributors',
             maxZoom: 18
             }).addTo(map);
+            
+            // custom marker
+            map.on('click',function(ev){
+                var latlng = map.mouseEventToLatLng(ev.originalEvent);
+                console.log(latlng.lat + ', ' + latlng.lng);
+                var clickedIcon = L.icon({
+                    iconUrl: 'https://www.pngfind.com/pngs/m/114-1147878_location-poi-pin-marker-position-red-map-google.png',
+                    iconSize: [50,60]
+                })
+                var marker = new L.marker([latlng.lat, latlng.lng], {icon: clickedIcon});
+
+                map.addLayer(marker);
+            });
+            

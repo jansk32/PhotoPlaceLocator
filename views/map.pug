@@ -20,7 +20,7 @@ html
                 var latlng = map.mouseEventToLatLng(ev.originalEvent);
                 console.log(latlng.lat + ', ' + latlng.lng);
                
-                var marker = new L.marker([latlng.lat, latlng.lng]);
+                var marker = new L.marker([latlng.lat, latlng.lng]); 
 
                 map.addLayer(marker);
             });

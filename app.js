@@ -11,5 +11,10 @@ app.get('/', function(req,res){
     res.render('map');
 })
 
+app.get('/create', function(req,res){
+    res.render('create');
+})
+
+
 app.listen(port);
 console.log("Listening to port " + port);

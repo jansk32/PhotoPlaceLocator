@@ -2,7 +2,7 @@ doctype html
 html
     style
         include css/map.css
-    script(src='https://unpkg.com/leaflet@1.5.1/dist/leaflet.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js')
     body
         #map
         script.
@@ -19,11 +19,8 @@ html
             map.on('click',function(ev){
                 var latlng = map.mouseEventToLatLng(ev.originalEvent);
                 console.log(latlng.lat + ', ' + latlng.lng);
-                var clickedIcon = L.icon({
-                    iconUrl: 'https://www.pngfind.com/pngs/m/114-1147878_location-poi-pin-marker-position-red-map-google.png',
-                    iconSize: [50,60]
-                })
-                var marker = new L.marker([latlng.lat, latlng.lng], {icon: clickedIcon});
+               
+                var marker = new L.marker([latlng.lat, latlng.lng]);
 
                 map.addLayer(marker);
             });
